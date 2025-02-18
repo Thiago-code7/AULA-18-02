@@ -1,0 +1,51 @@
+### Rota para pegar os equipamentos
+GET http://localhost:2000/equipamentos
+
+### fechando a requicisao
+
+### Rota criando o equipamento
+POST http://localhost:2000/equipamentos
+Content-Type: application/json
+
+{
+    "id":"3",
+    "nomeFuncionario": "josé",
+    "nomeEquipamento":"cinto paraquedista",
+    "dataRetirada":"10-04-2024",
+    "dataDevolucao":"12-02-2025",
+    "status":"em perfeito estado"
+    
+}
+
+### 
+
+
+###pegar Equipamento pelo id
+GET http://localhost:2000/equipamentos/3
+Content-Type: application/json
+
+###
+
+### PUT-editar equipamento
+
+PUT http://localhost:2000/equipamentos/1
+Content-Type: application/json
+
+{
+    "novoNome": "capacete",
+    "novoPreco":  130
+}
+
+###
+
+### DELETE- excluir um equipamento
+DELETE http://localhost:2000/equipamentos/2
+Content-Type: application/json
+
+###
+
+###
+
+### DELETE-excluir todos os produtos
+DELETE http://localhost:2000/equipamentos
+Content-Type: application/json
