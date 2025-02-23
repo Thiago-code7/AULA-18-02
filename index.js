@@ -38,7 +38,12 @@ app.get('/equipamentos', (requisicao, resposta) => {
       const novoEquipamento = { id, nomeFuncionario, nomeEquipamento, dataRetirada, dataDevolucao, status  };
       bancoDados.push(novoEquipamento);
       resposta.status(201).json({ mensagem: "Equipamento criado com sucesso" });
-    } catch (error) { }
+    } catch (error) { 
+      resposta.status(500).json({
+        mensagem: "Erro ao cadastrar Equipamento",
+        erro: error.message,
+      });
+    }
   });
 
   app.put("/equipamento/:id", (requisicao, resposta) => {
@@ -63,7 +68,10 @@ app.get('/equipamentos', (requisicao, resposta) => {
        
       resposta.status(200).json({ mensagem: "Equipamento atualizado com sucesso" })
     } catch (error) {
-  
+      resposta.status(500).json({
+        mensagem: "Erro ao editar Equipamentos!",
+        erro: error.message
+      });
     }
   })
 
