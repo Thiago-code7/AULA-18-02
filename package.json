@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "pg": "^8.13.3"
   },
   "name": "aula-18-02",
   "version": "1.0.0",
